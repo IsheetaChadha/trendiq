@@ -39,7 +39,7 @@ export function BundleCard({ bundle }: { bundle: Bundle }) {
             title={`${p.brand} ${p.name}`}
             className="h-9 w-9 overflow-hidden rounded-lg"
           >
-            <ProductArt category={p.category} brand={p.brand} />
+            <ProductArt category={p.category} brand={p.brand} shape={p.shape} />
           </div>
         ))}
       </div>

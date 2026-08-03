@@ -6,7 +6,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <div className="flex flex-col rounded-xl border border-zinc-200 bg-white p-4">
       <div className="h-24 w-full overflow-hidden rounded-lg">
-        <ProductArt category={product.category} brand={product.brand} />
+        <ProductArt category={product.category} brand={product.brand} shape={product.shape} />
       </div>
       <span
         className={`mt-3 w-fit rounded-full px-2 py-0.5 text-[10px] font-medium ${brandStyles[product.brand]}`}

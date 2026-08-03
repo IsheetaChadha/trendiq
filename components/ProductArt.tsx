@@ -1,6 +1,6 @@
-import type { Brand } from "@/lib/data";
+import type { Brand, PackageShape } from "@/lib/data";
 
-type Shape = "bar" | "box" | "pouch" | "bottle" | "can" | "juicebox" | "bag" | "jar";
+type Shape = PackageShape;
 
 const shapeForCategory: Record<string, Shape> = {
   "Protein Bars": "bar",
@@ -12,6 +12,15 @@ const shapeForCategory: Record<string, Shape> = {
   Jerky: "pouch",
   Snacks: "bag",
   Essentials: "jar",
+  Dairy: "tub",
+  Meat: "pouch",
+  Nuts: "pouch",
+  Soda: "bottle",
+  Appetizers: "box",
+  Rice: "bag",
+  "Canned Goods": "can",
+  Frozen: "bag",
+  Baking: "box",
 };
 
 type Palette = { primary: string; light: string; dark: string };
@@ -22,8 +31,16 @@ const brandColors: Record<Brand, Palette> = {
   "Wholesome Pantry": { primary: "#059669", light: "#d1fae5", dark: "#065f46" },
 };
 
-export function ProductArt({ category, brand }: { category: string; brand: Brand }) {
-  const shape = shapeForCategory[category] ?? "box";
+export function ProductArt({
+  category,
+  brand,
+  shape: shapeOverride,
+}: {
+  category: string;
+  brand: Brand;
+  shape?: PackageShape;
+}) {
+  const shape = shapeOverride ?? shapeForCategory[category] ?? "box";
   const colors = brandColors[brand];
 
   return (
@@ -118,6 +135,14 @@ function renderShape(shape: Shape, colors: Palette) {
           <rect x="34" y="30" width="52" height="14" rx="4" fill={colors.dark} />
           <rect x="30" y="42" width="60" height="62" rx="10" fill={colors.primary} />
           <rect x="38" y="60" width="44" height="26" rx="4" fill="white" opacity="0.85" />
+        </g>
+      );
+    case "tub":
+      return (
+        <g>
+          <rect x="22" y="28" width="76" height="12" rx="4" fill={colors.dark} />
+          <path d="M28 40 L92 40 L84 96 Q60 102 36 96 Z" fill={colors.primary} />
+          <ellipse cx="60" cy="68" rx="26" ry="16" fill="white" opacity="0.85" />
         </g>
       );
     default:
