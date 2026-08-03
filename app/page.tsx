@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Topbar />
       <main className="flex-1 px-4 py-6 sm:px-8 sm:py-8">
-        <h1 className="text-xl font-semibold text-zinc-900 sm:text-2xl">Good morning, Sarah! 👋</h1>
+        <h1 className="text-xl font-semibold text-zinc-900 sm:text-2xl">Good morning, Executives! 👋</h1>
         <p className="mt-1 text-sm text-zinc-500">
           Here are today&apos;s top opportunities, powered by EagleEye trend insights.
         </p>
