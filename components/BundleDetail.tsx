@@ -98,8 +98,8 @@ export function BundleDetail({ bundle }: { bundle: Bundle }) {
 
             <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
               <div>
-                <div className="text-xs text-zinc-400">Trend Duration</div>
-                <div className="font-medium text-zinc-900">{bundle.trendDuration}</div>
+                <div className="text-xs text-zinc-400">Peak Season</div>
+                <div className="font-medium text-zinc-900">{bundle.seasonality}</div>
               </div>
               <div>
                 <div className="text-xs text-zinc-400">Demand Strength</div>
@@ -112,12 +112,12 @@ export function BundleDetail({ bundle }: { bundle: Bundle }) {
                 </div>
               </div>
               <div>
-                <div className="text-xs text-zinc-400">Stores Using This</div>
+                <div className="text-xs text-zinc-400">Stores Stocking This</div>
                 <div className="font-medium text-zinc-900">{bundle.storesUsing.toLocaleString()}+</div>
               </div>
               <div>
-                <div className="text-xs text-zinc-400">Avg. Sell Through</div>
-                <div className="font-medium text-zinc-900">{bundle.sellThrough}%</div>
+                <div className="text-xs text-zinc-400">Typically Sells Out In</div>
+                <div className="font-medium text-zinc-900">{bundle.sellsOutIn}</div>
               </div>
             </div>
           </div>

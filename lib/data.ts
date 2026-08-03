@@ -33,10 +33,9 @@ export type Bundle = {
   confidence: number;
   description: string;
   whyRecommended: string;
-  trendDuration: string;
   demandStrength: number;
   storesUsing: number;
-  sellThrough: number;
+  sellsOutIn: string;
   whyBullets: string[];
   frequentlyBoughtWith: string[];
   seasonality: string;
@@ -69,10 +68,9 @@ export const bundles: Bundle[] = [
       "A curated mix of top-performing high protein snacks, drinks, and meal solutions built around the growing protein trend, drawing on your house brands.",
     whyRecommended:
       "Stores like yours have seen a noticeable jump in protein purchases this quarter — this assortment is built to capture that demand.",
-    trendDuration: "Jul - Oct 2024",
     demandStrength: 90,
     storesUsing: 1100,
-    sellThrough: 80,
+    sellsOutIn: "~3 weeks",
     whyBullets: [
       "Rising increase in protein purchases across similar stores",
       "Frequently bought together across bars, drinks, and jerky",
@@ -103,10 +101,9 @@ export const bundles: Bundle[] = [
       "The top-selling snacks, beverages, and party essentials for the biggest game day weekends of the year, built around your house brands.",
     whyRecommended:
       "Snack and beverage purchases spike near your store on game weekends — stock up before the next one hits.",
-    trendDuration: "Aug - Feb 2024",
     demandStrength: 87,
     storesUsing: 850,
-    sellThrough: 76,
+    sellsOutIn: "~2 weeks",
     whyBullets: [
       "Notable spike in snack and beverage purchases on game weekends",
       "Frequently bought together across chips, dip, and soda",
@@ -135,10 +132,9 @@ export const bundles: Bundle[] = [
       "The kid-favorite snacks and lunchbox staples parents restock every week during back-to-school season, drawing on your house brands.",
     whyRecommended:
       "Lunchbox snack purchases are climbing in your area this time of year — this assortment keeps your shelves stocked for it.",
-    trendDuration: "Aug - Sep 2024",
     demandStrength: 83,
     storesUsing: 620,
-    sellThrough: 78,
+    sellsOutIn: "~4 weeks",
     whyBullets: [
       "Notable increase in lunchbox snack purchases in August",
       "Frequently bought together across crackers, fruit snacks, and juice",
