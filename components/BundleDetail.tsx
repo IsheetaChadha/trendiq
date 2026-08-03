@@ -6,6 +6,7 @@ import { ChevronLeft, Share2 } from "lucide-react";
 import type { Bundle } from "@/lib/data";
 import { useToast } from "@/components/ToastProvider";
 import { ProductCard } from "@/components/ProductCard";
+import { BundleCover } from "@/components/BundleCover";
 
 type Tab = "overview" | "products" | "why";
 
@@ -36,6 +37,8 @@ export function BundleDetail({ bundle }: { bundle: Bundle }) {
         <ChevronLeft className="h-4 w-4" />
         Back to Recommendations
       </Link>
+
+      <BundleCover bundle={bundle} className="mt-4 h-28 w-28 sm:h-32 sm:w-32" />
 
       <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
         <div>

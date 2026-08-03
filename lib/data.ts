@@ -43,6 +43,7 @@ export type Bundle = {
   title: string;
   subtitle: string;
   confidence: number;
+  coverImage: string;
   description: string;
   whyRecommended: string;
   demandStrength: number;
@@ -76,6 +77,7 @@ export const bundles: Bundle[] = [
     title: "Fuel Your Basket",
     subtitle: "High Protein · Health Trend",
     confidence: 94,
+    coverImage: "/bundles/fuel-your-basket.jpg",
     description:
       "A ready-made Bowl & Basket Protein Pack — eggs, dairy, and nuts bundled together with 70g+ of protein per pack to meet the growing protein trend.",
     whyRecommended:
@@ -107,6 +109,7 @@ export const bundles: Bundle[] = [
     title: "Winning Game Day",
     subtitle: "Snacks · Appetizers · Serves 4",
     confidence: 91,
+    coverImage: "/bundles/winning-game-day.jpg",
     description:
       "The Bowl & Basket Winning Basket — jerky, chips, salsa, and hot appetizers bundled together for game day. Snack like a champion, the Wakefern way.",
     whyRecommended:
@@ -138,6 +141,7 @@ export const bundles: Bundle[] = [
     title: "Mango Sticky Rice: The Wakefern Way",
     subtitle: "Dessert Bundle · Bowl & Basket",
     confidence: 88,
+    coverImage: "/bundles/mango-sticky-rice.jpg",
     description:
       "Everything needed to make an authentic mango sticky rice dessert at home — jasmine rice, coconut milk, and mango chunks bundled together as a single Bowl & Basket kit.",
     whyRecommended:

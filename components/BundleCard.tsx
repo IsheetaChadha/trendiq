@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Bundle } from "@/lib/data";
 import { useToast } from "@/components/ToastProvider";
 import { ProductArt } from "@/components/ProductArt";
+import { BundleCover } from "@/components/BundleCover";
 import { Package } from "lucide-react";
 
 const tagStyles: Record<string, string> = {
@@ -16,16 +17,22 @@ export function BundleCard({ bundle }: { bundle: Bundle }) {
 
   return (
     <div className="flex flex-col rounded-2xl border border-zinc-200 bg-white p-5">
-      <span
-        className={`w-fit rounded-full px-3 py-1 text-xs font-medium ${
-          tagStyles[bundle.tag] ?? "bg-zinc-100 text-zinc-600"
-        }`}
-      >
-        {bundle.tag}
-      </span>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <span
+            className={`w-fit rounded-full px-3 py-1 text-xs font-medium ${
+              tagStyles[bundle.tag] ?? "bg-zinc-100 text-zinc-600"
+            }`}
+          >
+            {bundle.tag}
+          </span>
 
-      <h3 className="mt-3 text-lg font-semibold text-zinc-900">{bundle.title}</h3>
-      <p className="text-sm text-zinc-500">{bundle.subtitle}</p>
+          <h3 className="mt-3 text-lg font-semibold text-zinc-900">{bundle.title}</h3>
+          <p className="text-sm text-zinc-500">{bundle.subtitle}</p>
+        </div>
+
+        <BundleCover bundle={bundle} className="h-20 w-20" />
+      </div>
 
       <div className="mt-4">
         <div className="text-2xl font-bold text-emerald-600">{bundle.confidence}%</div>
