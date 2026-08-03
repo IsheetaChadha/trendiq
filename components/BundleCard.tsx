@@ -31,7 +31,7 @@ export function BundleCard({ bundle }: { bundle: Bundle }) {
           <p className="text-sm text-zinc-500">{bundle.subtitle}</p>
         </div>
 
-        <BundleCover bundle={bundle} className="h-20 w-20" />
+        <BundleCover bundle={bundle} className="h-28 max-w-40" />
       </div>
 
       <div className="mt-4">

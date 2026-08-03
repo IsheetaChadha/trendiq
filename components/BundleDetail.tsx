@@ -38,7 +38,7 @@ export function BundleDetail({ bundle }: { bundle: Bundle }) {
         Back to Recommendations
       </Link>
 
-      <BundleCover bundle={bundle} className="mt-4 h-28 w-28 sm:h-32 sm:w-32" />
+      <BundleCover bundle={bundle} className="mt-4 h-36 max-w-56 sm:h-44 sm:max-w-72" />
 
       <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
         <div>
